@@ -1,0 +1,83 @@
+{% extends 'base.html' %}
+{% block title%}
+Home Page
+{% endblock %}
+{% block class %}
+class = "nav-item active"
+{% endblock %}
+{% block class2 %}
+class = "nav-item"
+{% endblock %}
+{% block class3 %}
+class = "nav-item"
+{% endblock %}
+{% block link1 %}
+"{{ url_for('home_page') }}"
+{% endblock %}
+{% block link2 %}
+"{{ url_for('market_page') }}"
+{% endblock %}
+{% block link3 %}
+"{{ url_for('login_page') }}"
+{% endblock %}
+{% block link4 %}
+"{{ url_for('register_page') }}"
+{% endblock %}
+{% block content %}
+
+<section class="s12" id="home">
+   <div class="greeting-wrapper">
+      <h1>Secret Santa</h1>
+   </div>
+</section>
+
+<section class="s2" id="about">
+   <div class="main-container">
+      <div class="about-wrapper">
+         <div class="about-me">
+            <h4>More about Secret Santa</h4>
+            <br>
+            <br>
+            <p>
+               Secret Santa is a Western Christmas tradition in which members of a group or community are randomly
+               assigned a person to whom they give a gift. The identity of the gift giver is to remain a secret and
+               should not be revealed.
+            </p>
+         </div>
+         <div class="social-links">
+            <img id="social_image"
+               src="https://elearningindustry.com/wp-content/uploads/2021/11/shutterstock_1820896832.jpg">
+            <h3>Find out more</h3>
+            <a target="_blank" href="https://en.wikipedia.org/wiki/Secret_Santa">Wikipedia Page</a>
+         </div>
+      </div>
+   </div>
+</section>
+
+<section class="s1" id="contact">
+   <div class="main-container">
+      <div class="about-wrapper">
+         <div class="social-links">
+            <img id="social_image1" src="https://cdn-icons-png.flaticon.com/512/295/295128.png">
+         </div>
+         <div class="about-me">
+            <h4>How to Join</h4>
+            <br>
+            <br>
+            <p>
+               Join by registering/logging into the website and filling out the form in the enter page. After you
+               enter, wait on the page till the date specified, then you will see who you got.
+            </p>
+         </div>
+      </div>
+   </div>
+</section>
+<footer style="position:relative">
+   <p class="i">
+      <br>
+      &copy;
+      <script>document.write(new Date().getFullYear());</script> Secret Santa. All Rights Reserved
+      <br>
+   </p>
+</footer>
+{% endblock %}

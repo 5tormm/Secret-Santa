@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+{% block title%}
+Home Page
+{% endblock %}
+{% block class %}
+class = "nav-item"
+{% endblock %}
+{% block class2 %}
+class = "nav-item active"
+{% endblock %}
+{% block class3 %}
+class = "nav-item"
+{% endblock %}
+{% block class4 %}
+class = "nav-item"
+{% endblock %}
+{% block content %}
+<body class="text-center">
+   <div class="container">
+      <form method="POST" class="form-signin" style="color:white">
+         {{ form.hidden_tag() }}
+         <img class="a" src="https://cdn-icons-png.flaticon.com/512/3723/3723050.png" alt="">
+         <h1 class="h3 mb-3 font-weight-normal">
+            Enter In
+         </h1>
+         <br>
+         {{ form.invite_code.label() }}
+         {{ form.invite_code(class="form-control", placeholder="Invite Code") }}
+         {{ form.wishlist.label() }}
+         {{ form.wishlist(class="form-control", placeholder="Wishlist") }}
+         <br>
+         {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+         <br>
+         <div class="checkbox mb-3">
+            <h6>Create an Event?</h6>
+            <a class="btn btn-sm btn-secondary" href="{{ url_for('create_page') }}">Create</a>
+         </div>
+      </form> 
+   </div>
+</body>
+{% endblock %}
+{% block link1 %}
+"{{ url_for('home_page') }}"
+{% endblock %}
+{% block link2 %}
+"{{ url_for('market_page') }}"
+{% endblock %}
+{% block link3 %}
+"{{ url_for('login_page') }}"
+{% endblock %}
+{% block link4 %}
+"{{ url_for('register_page') }}"
+{% endblock %}

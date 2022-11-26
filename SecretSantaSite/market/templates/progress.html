@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title%}
+Home Page
+{% endblock %}
+{% block class8 %}
+class = "nav-item active"
+{% endblock %}
+{% block content %}
+<body class="text-center">
+   <div class="container">
+      <h1 class="h3 mb-3 font-weight-normal">
+         Progress
+      </h1>
+
+      <p>
+         Your person is {{ p }}! Their wishlist is {{ w }}!
+      </p>
+      <br>
+      <p>
+         {{ d }}
+      </p>
+   </div>
+</body>
+
+{% endblock %}

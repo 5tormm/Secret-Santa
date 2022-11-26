@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title%}
+Home Page
+{% endblock %}
+{% block class7 %}
+class = "nav-item active"
+{% endblock %}
+{% block content %}
+<body class="text-center">
+   <div class="container">
+      <form method="POST" class="form-signin" style="color:white">
+         {{ form.csrf_token }}
+         {{ form.hidden_tag() }}
+         <img class="a" src="https://cdn-icons-png.flaticon.com/512/3723/3723050.png" alt="">
+         <h1 class="h3 mb-3 font-weight-normal">
+            Create Event
+         </h1>
+         {{ form.submit(class="btn btn-lg btn-block btn-primary") }}
+         <div class="checkbox mb-3">
+            <h6>Want to Join an event?</h6>
+            <a class="btn btn-sm btn-secondary" href="{{ url_for('enter_page') }}">Join</a>
+         </div>
+      </form> 
+   </div>
+</body>
+
+{% endblock %}
